@@ -12,7 +12,7 @@
   <div class="brand">
     <img class="logo" src="assets/logo-bipa.png" alt="Logo BIPA" width="220" height="145" decoding="async">
     <div class="brand-copy">
-      <div class="hero-kicker">Calendario documental devocional</div>
+      <div class="hero-kicker">Portal devocional interactivo</div>
       <h1>Calendario BIPA Religioso</h1>
       <p>
         Calendario documental de celebraciones católicas, santos,
@@ -24,7 +24,44 @@
 </section>
 <section class="upcoming" id="upcoming" aria-live="polite"></section>
 <section class="controls">
-<div class="month-panel">
+  <div class="search-panel">
+    <label class="search" for="search">
+      <span aria-hidden="true">⌕</span>
+      <input id="search" type="search" placeholder="Buscar por celebración, región, santo, advocación o producto BIPA">
+    </label>
+    <div class="quick-filters" id="quickFilters" aria-label="Filtros rápidos"></div>
+  </div>
+  <div class="view-tabs" role="tablist" aria-label="Vistas del portal">
+    <button class="view-tab active" type="button" data-view="cards" role="tab" aria-selected="true">Tarjetas</button>
+    <button class="view-tab" type="button" data-view="calendar" role="tab" aria-selected="false">Calendario</button>
+    <button class="view-tab" type="button" data-view="timeline" role="tab" aria-selected="false">Agenda</button>
+  </div>
+  <div class="filter-row">
+    <label>
+      <span>Categoría</span>
+      <select id="categoryFilter">
+        <option value="all">Todas</option>
+        <option value="mariana">Marianas</option>
+        <option value="santo">Santos</option>
+        <option value="cristo">Cristo y liturgia</option>
+        <option value="tradicion">Tradiciones venezolanas</option>
+      </select>
+    </label>
+    <label>
+      <span>Alcance</span>
+      <select id="typeFilter">
+        <option value="all">Todos</option>
+        <option value="principal">Principal</option>
+        <option value="regional">Regional</option>
+      </select>
+    </label>
+    <label>
+      <span>Región</span>
+      <select id="regionFilter"></select>
+    </label>
+    <button class="reset" id="resetFilters" type="button">Limpiar filtros</button>
+  </div>
+  <div class="month-panel">
     <div class="month-head">
       <div>
         <strong>Selector de mes</strong>
@@ -42,6 +79,7 @@
     </div>
   </div>
 </section>
+<section class="insights" id="insights" aria-live="polite"></section>
 <section class="content" id="content" aria-live="polite"></section>
 <footer>
   Las celebraciones están clasificadas como nacionales, diocesanas o regionales.
@@ -66,14 +104,21 @@
         <div class="detail"><label>Descripción</label><p id="modalDescription"></p></div>
         <div class="detail"><label>Importancia</label><p id="modalImportance"></p></div>
         <div class="detail"><label>Curiosidades</label><p id="modalCuriosities"></p></div>
+        <div class="detail"><label>Oración sugerida</label><p id="modalPrayer"></p></div>
+        <div class="detail"><label>Preparación BIPA</label><p id="modalPreparation"></p></div>
         <div class="detail"><label>Fecha</label><p id="modalDate"></p></div>
         <div class="detail"><label>Región</label><p id="modalRegion"></p></div>
+        <div class="detail"><label>Categoría</label><p id="modalCategory"></p></div>
         <div class="detail"><label>Fuente</label><p id="modalSource"></p></div>
         <div class="detail recommendation-detail">
           <label id="modalCandleLabel">Artículo BIPA recomendado para la celebración</label>
           <p id="modalCandleProduct"></p>
           <p id="modalCandleText"></p>
           <a id="modalCandleSource" class="source-link" target="_blank" rel="noopener noreferrer">Fuente de referencia</a>
+        </div>
+        <div class="modal-actions">
+          <button class="recommendation" id="modalRecommendationButton" type="button">Ver recomendación BIPA</button>
+          <button class="share" id="modalShareButton" type="button">Compartir por WhatsApp</button>
         </div>
       </div>
     </div>
