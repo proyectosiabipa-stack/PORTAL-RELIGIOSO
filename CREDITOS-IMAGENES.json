@@ -1,0 +1,425 @@
+[
+  {
+    "id": "maria-madre",
+    "celebracion": "Santa María, Madre de Dios",
+    "consulta": "María, madre de Jesús",
+    "pagina": "https://es.wikipedia.org/wiki/Mar%C3%ADa_(madre_de_Jes%C3%BAs)",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Vierge_en_oraison_%28Il_Sassoferrato%29.jpg/330px-Vierge_en_oraison_%28Il_Sassoferrato%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "epifania",
+    "celebracion": "Epifanía del Señor",
+    "consulta": "Epifanía",
+    "pagina": "https://es.wikipedia.org/wiki/Epifan%C3%ADa",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Epifan%C3%ADa_de_Roland_de_Mois.jpg/330px-Epifan%C3%ADa_de_Roland_de_Mois.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "divina-pastora",
+    "celebracion": "Divina Pastora",
+    "consulta": "Divina Pastora (Barquisimeto)",
+    "pagina": "https://es.wikipedia.org/wiki/Divina_Pastora_(Barquisimeto)",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Divinapastora2014md.jpg/330px-Divinapastora2014md.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "san-sebastian",
+    "celebracion": "San Sebastián",
+    "consulta": "Sebastián (mártir)",
+    "pagina": "https://es.wikipedia.org/wiki/Sebasti%C3%A1n_de_Mil%C3%A1n",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/St._Sebastian_by_Sodoma.jpg/330px-St._Sebastian_by_Sodoma.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "virgen-paz",
+    "celebracion": "Nuestra Señora de la Paz",
+    "consulta": "Virgen de la Paz (Venezuela)",
+    "pagina": "https://es.wikipedia.org/wiki/Monumento_a_la_Virgen_de_la_Paz",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Monumento_Virgen_de_La_Paz_I.jpg/330px-Monumento_Virgen_de_La_Paz_I.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "conversion-pablo",
+    "celebracion": "Conversión de San Pablo",
+    "consulta": "Conversión de Pablo de Tarso",
+    "pagina": "https://es.wikipedia.org/wiki/Pablo_de_Tarso",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/ElGrecoPaul_%28cropped%29.jpg/330px-ElGrecoPaul_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "resurreccion",
+    "celebracion": "Domingo de Resurrección",
+    "consulta": "Pascua",
+    "pagina": "https://es.wikipedia.org/wiki/Pascua",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Resurrection.JPG/330px-Resurrection.JPG?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "visitacion",
+    "celebracion": "Visitación de María",
+    "consulta": "Visitación",
+    "pagina": "https://es.wikipedia.org/wiki/Visitaci%C3%B3n_de_la_Virgen",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Visitaci%C3%B3n_de_Rafael.jpg/330px-Visitaci%C3%B3n_de_Rafael.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "antonio",
+    "celebracion": "San Antonio de Padua",
+    "consulta": "Antonio de Padua",
+    "pagina": "https://es.wikipedia.org/wiki/Antonio_de_Padua",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Antonio_de_Pereda_y_Salgado_-_St_Anthony_of_Padua_with_Christ_Child_%28detail%29_-_WGA17168.jpg/330px-Antonio_de_Pereda_y_Salgado_-_St_Anthony_of_Padua_with_Christ_Child_%28detail%29_-_WGA17168.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "juan-bautista",
+    "celebracion": "San Juan Bautista",
+    "consulta": "Juan el Bautista",
+    "pagina": "https://es.wikipedia.org/wiki/Juan_el_Bautista",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Anton_Raphael_Mengs_-_St._John_the_Baptist_Preaching_in_the_Wilderness_-_Google_Art_Project.jpg/330px-Anton_Raphael_Mengs_-_St._John_the_Baptist_Preaching_in_the_Wilderness_-_Google_Art_Project.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "corpus",
+    "celebracion": "Corpus Christi",
+    "consulta": "Corpus Christi",
+    "pagina": "https://es.wikipedia.org/wiki/Corpus_Christi",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Corpus_Barcelona_2006.jpg/330px-Corpus_Barcelona_2006.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "carmen",
+    "celebracion": "Nuestra Señora del Carmen",
+    "consulta": "Virgen del Carmen",
+    "pagina": "https://es.wikipedia.org/wiki/Virgen_del_Carmen",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Holy_Land_2016_P0262_Stella_Maris_Monastery_maina_altar_Our_Lady_of_mount_Carmel.jpg/330px-Holy_Land_2016_P0262_Stella_Maris_Monastery_maina_altar_Our_Lady_of_mount_Carmel.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "santiago",
+    "celebracion": "Santiago Apóstol",
+    "consulta": "Santiago el Mayor",
+    "pagina": "https://es.wikipedia.org/wiki/Santiago_el_Mayor",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Guido_Reni_-_Saint_James_the_Greater_-_Google_Art_Project.jpg/330px-Guido_Reni_-_Saint_James_the_Greater_-_Google_Art_Project.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "santa-ana",
+    "celebracion": "Santa Ana",
+    "consulta": "Ana (madre de María)",
+    "pagina": "https://es.wikipedia.org/wiki/Ana_(madre_de_Mar%C3%ADa)",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/St._Anne_and_the_Virgin_-_Ramons_Destorrents%2C_Arnan_and_Ferrer_Bassa_-_c._1350_-_Tempera_on_panel.JPG/330px-St._Anne_and_the_Virgin_-_Ramons_Destorrents%2C_Arnan_and_Ferrer_Bassa_-_c._1350_-_Tempera_on_panel.JPG?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "virgen-nieves",
+    "celebracion": "Nuestra Señora de las Nieves",
+    "consulta": "Virgen de las Nieves",
+    "pagina": "https://es.wikipedia.org/wiki/Virgen_de_las_Nieves",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Our_Lady_of_Snow.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "transfiguracion",
+    "celebracion": "Transfiguración del Señor",
+    "consulta": "Transfiguración de Jesús",
+    "pagina": "https://es.wikipedia.org/wiki/Transfiguraci%C3%B3n_de_Jes%C3%BAs",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Transfiguration_bloch.jpg/330px-Transfiguration_bloch.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "consolacion",
+    "celebracion": "Nuestra Señora de la Consolación",
+    "consulta": "Virgen de la Consolación",
+    "pagina": "https://es.wikipedia.org/wiki/Virgen_de_Consolaci%C3%B3n",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Consueloprocesion.jpg/330px-Consueloprocesion.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "todos-santos",
+    "celebracion": "Todos los Santos",
+    "consulta": "Día de Todos los Santos",
+    "pagina": "https://es.wikipedia.org/wiki/D%C3%ADa_de_Todos_los_Santos",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/All-Saints.jpg/330px-All-Saints.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "navidad",
+    "celebracion": "Navidad",
+    "consulta": "Navidad",
+    "pagina": "https://es.wikipedia.org/wiki/Navidad",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Mural_-_Birth_of_Christ.jpg/330px-Mural_-_Birth_of_Christ.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "san-marcos",
+    "celebracion": "San Marcos Evangelista",
+    "consulta": "Saint Mark Evangelist",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3ABowyer_Bible_print_4213_Mark_the_Evangelist_Mark_4_Perelle.jpg",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Bowyer_Bible_print_4213_Mark_the_Evangelist_Mark_4_Perelle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "proveedor": "Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "cruz-mayo",
+    "celebracion": "Cruz de Mayo",
+    "consulta": "Cruz de Mayo Venezuela",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3ACantos_a_la_Cruz_de_Mayo.jpg",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Cantos_a_la_Cruz_de_Mayo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "proveedor": "Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "santa-marta",
+    "celebracion": "Santa Marta",
+    "consulta": "Saint Martha",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3AAll_Saints_church%2C_Preston_Bagot_-_Mary_and_Martha_stained-glass_windows_2016.jpg",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/All_Saints_church%2C_Preston_Bagot_-_Mary_and_Martha_stained-glass_windows_2016.jpg/1280px-All_Saints_church%2C_Preston_Bagot_-_Mary_and_Martha_stained-glass_windows_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "proveedor": "Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "san-blas",
+    "celebracion": "Blas de Sebaste",
+    "consulta": "Blas de Sebaste",
+    "pagina": "https://es.wikipedia.org/wiki/Blas_de_Sebaste",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/%C5%9Aw._B%C5%82a%C5%BCej_w_chwale_mi%C4%99dzy_%C5%9Bwi%C4%99tymi_Mari%C4%85_Magdalen%C4%85_i_Janem_Nepomucenem.jpg/330px-%C5%9Aw._B%C5%82a%C5%BCej_w_chwale_mi%C4%99dzy_%C5%9Bwi%C4%99tymi_Mari%C4%85_Magdalen%C4%85_i_Janem_Nepomucenem.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "catedra-pedro",
+    "celebracion": "Cátedra de San Pedro",
+    "consulta": "Cátedra de San Pedro",
+    "pagina": "https://es.wikipedia.org/wiki/C%C3%A1tedra_de_San_Pedro",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Saint_Peter%27s_Basilica_Papal_Altar_2020_P03.jpg/330px-Saint_Peter%27s_Basilica_Papal_Altar_2020_P03.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "anunciacion",
+    "celebracion": "Anunciación",
+    "consulta": "Anunciación",
+    "pagina": "https://es.wikipedia.org/wiki/Anunciaci%C3%B3n",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Church_of_Nuestra_Se%C3%B1ora_de_la_Asunci%C3%B3n_in_Villamelendro_de_Valdavia_10_Annunciation.jpg/330px-Church_of_Nuestra_Se%C3%B1ora_de_la_Asunci%C3%B3n_in_Villamelendro_de_Valdavia_10_Annunciation.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "domingo-ramos",
+    "celebracion": "Domingo de Ramos",
+    "consulta": "Domingo de Ramos",
+    "pagina": "https://es.wikipedia.org/wiki/Domingo_de_Ramos",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Giotto_di_Bondone_-_No._26_Scenes_from_the_Life_of_Christ_-_10._Entry_into_Jerusalem_-_WGA09206.jpg/330px-Giotto_di_Bondone_-_No._26_Scenes_from_the_Life_of_Christ_-_10._Entry_into_Jerusalem_-_WGA09206.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "nazareno",
+    "celebracion": "Nazareno de San Pablo",
+    "consulta": "Nazareno de San Pablo",
+    "pagina": "https://es.wikipedia.org/wiki/Nazareno_de_San_Pablo",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/NAZARENO_DE_SAN_PABLO_4.jpg/330px-NAZARENO_DE_SAN_PABLO_4.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "jueves-santo",
+    "celebracion": "Jueves Santo",
+    "consulta": "Jueves Santo",
+    "pagina": "https://es.wikipedia.org/wiki/Jueves_Santo",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/%C3%9Altima_Cena_-_Juan_de_Juanes.jpg/330px-%C3%9Altima_Cena_-_Juan_de_Juanes.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "viernes-santo",
+    "celebracion": "Viernes Santo",
+    "consulta": "Viernes Santo",
+    "pagina": "https://es.wikipedia.org/wiki/Viernes_Santo",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristo_crucificado.jpg/330px-Cristo_crucificado.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "san-isidro",
+    "celebracion": "Isidro Labrador",
+    "consulta": "Isidro Labrador",
+    "pagina": "https://es.wikipedia.org/wiki/Isidro_Labrador",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/El_milagro_del_pozo._Alonso_Cano_%281638-1640%29.jpg/330px-El_milagro_del_pozo._Alonso_Cano_%281638-1640%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "san-fernando",
+    "celebracion": "Fernando III de Castilla",
+    "consulta": "Fernando III de Castilla",
+    "pagina": "https://es.wikipedia.org/wiki/Fernando_III_de_Castilla",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Fernando_III_de_Castilla_02.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "pedro-pablo",
+    "celebracion": "San Pedro y San Pablo",
+    "consulta": "San Pedro y San Pablo",
+    "pagina": "https://es.wikipedia.org/wiki/San_Pedro_y_San_Pablo",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Guido_Reni_044.jpg/330px-Guido_Reni_044.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "asuncion",
+    "celebracion": "Asunción de María",
+    "consulta": "Asunción de María",
+    "pagina": "https://es.wikipedia.org/wiki/Asunci%C3%B3n_de_Mar%C3%ADa",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Ruiz_de_la_iglesia-asuncion.jpg/330px-Ruiz_de_la_iglesia-asuncion.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "coromoto",
+    "celebracion": "Virgen de Coromoto",
+    "consulta": "Virgen de Coromoto",
+    "pagina": "https://es.wikipedia.org/wiki/Nuestra_Se%C3%B1ora_de_Coromoto",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Santa_Reliquia_Virgen_Coromoto.jpg/330px-Santa_Reliquia_Virgen_Coromoto.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "exaltacion",
+    "celebracion": "Exaltación de la Santa Cruz",
+    "consulta": "Exaltación de la Santa Cruz",
+    "pagina": "https://es.wikipedia.org/wiki/Exaltaci%C3%B3n_de_la_Santa_Cruz",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Adam_Elsheimer_012.jpg/330px-Adam_Elsheimer_012.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "miguel",
+    "celebracion": "Miguel (arcángel)",
+    "consulta": "Miguel (arcángel)",
+    "pagina": "https://es.wikipedia.org/wiki/Arc%C3%A1ngel_Miguel",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/GuidoReni_MichaelDefeatsSatan.jpg/330px-GuidoReni_MichaelDefeatsSatan.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "candelaria",
+    "celebracion": "Candlemas",
+    "consulta": "Candlemas",
+    "pagina": "https://en.wikipedia.org/wiki/Candlemas",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/2017Candlemas.jpg/330px-2017Candlemas.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "san-jose",
+    "celebracion": "Saint Joseph",
+    "consulta": "Saint Joseph",
+    "pagina": "https://en.wikipedia.org/wiki/Saint_Joseph",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Guido_Reni_-_St_Joseph_with_the_Infant_Jesus_-_WGA19304.jpg/330px-Guido_Reni_-_St_Joseph_with_the_Infant_Jesus_-_WGA19304.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "teresa",
+    "celebracion": "Teresa de Lisieux",
+    "consulta": "Teresa de Lisieux",
+    "pagina": "https://es.wikipedia.org/wiki/Teresa_de_Lisieux",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Teresa-de-Lisieux.jpg/330px-Teresa-de-Lisieux.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "francisco",
+    "celebracion": "Francisco de Asís",
+    "consulta": "Francisco de Asís",
+    "pagina": "https://es.wikipedia.org/wiki/Francisco_de_As%C3%ADs",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/San_Francesco.jpg/330px-San_Francesco.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "rosario",
+    "celebracion": "Virgen del Rosario",
+    "consulta": "Virgen del Rosario",
+    "pagina": "https://es.wikipedia.org/wiki/Virgen_del_Rosario",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/2017-03_Brescia_Mattes_Pana_%28111%29.JPG/330px-2017-03_Brescia_Mattes_Pana_%28111%29.JPG?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "pilar",
+    "celebracion": "Virgen del Pilar",
+    "consulta": "Virgen del Pilar",
+    "pagina": "https://es.wikipedia.org/wiki/Virgen_del_Pilar",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Escultura_de_la_Virgen_del_Pilar%2C_en_la_Bas%C3%ADlica_del_Pilar_de_Zaragoza%2C_Espa%C3%B1a%2C_Spain.jpg/330px-Escultura_de_la_Virgen_del_Pilar%2C_en_la_Bas%C3%ADlica_del_Pilar_de_Zaragoza%2C_Espa%C3%B1a%2C_Spain.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "judas",
+    "celebracion": "Judas Tadeo",
+    "consulta": "Judas Tadeo",
+    "pagina": "https://es.wikipedia.org/wiki/Judas_Tadeo",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/San_Judas_Tadeo%2C_de_El_Greco_%28Museo_Nacional_de_Escultura_de_Valladolid%29.JPG/330px-San_Judas_Tadeo%2C_de_El_Greco_%28Museo_Nacional_de_Escultura_de_Valladolid%29.JPG?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia / Wikimedia Commons",
+    "verificado": "2026-08-27"
+  },
+  {
+    "id": "valle",
+    "celebracion": "Virgen del Valle",
+    "consulta": "Virgen del Valle (Venezuela)",
+    "pagina": "https://es.wikipedia.org/wiki/Virgen%20del%20Valle%20%28Venezuela%29",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Virgen_del_Valle_1931.jpg/330px-Virgen_del_Valle_1931.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia/Wikimedia Commons",
+    "verificado": true
+  },
+  {
+    "id": "difuntos",
+    "celebracion": "Día de los Fieles Difuntos",
+    "consulta": "Día de los Fieles Difuntos",
+    "pagina": "https://es.wikipedia.org/wiki/D%C3%ADa%20de%20los%20Fieles%20Difuntos",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/William-Adolphe_Bouguereau_%281825-1905%29_-_The_Day_of_the_Dead_%281859%29.jpg/330px-William-Adolphe_Bouguereau_%281825-1905%29_-_The_Day_of_the_Dead_%281859%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia/Wikimedia Commons",
+    "verificado": true
+  },
+  {
+    "id": "virgen-socorro",
+    "celebracion": "Nuestra Señora del Socorro",
+    "consulta": "Nuestra Señora del Socorro",
+    "pagina": "https://es.wikipedia.org/wiki/Nuestra%20Se%C3%B1ora%20del%20Socorro",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Virgen_del_Socorro.jpg/330px-Virgen_del_Socorro.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia/Wikimedia Commons",
+    "verificado": true
+  },
+  {
+    "id": "chiquinquira",
+    "celebracion": "Nuestra Señora de Chiquinquirá",
+    "consulta": "Iglesia de Nuestra Señora de Chiquinquirá (Santa Fe de Antioquia)",
+    "pagina": "https://es.wikipedia.org/wiki/Iglesia%20de%20Nuestra%20Se%C3%B1ora%20de%20Chiquinquir%C3%A1%20%28Santa%20Fe%20de%20Antioquia%29",
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Iglesia_de_Nra_Sra_de_Chiquinquira-Santa_Fe_de_Antioquia.jpg/330px-Iglesia_de_Nra_Sra_de_Chiquinquira-Santa_Fe_de_Antioquia.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "proveedor": "Wikipedia/Wikimedia Commons",
+    "verificado": true
+  }
+]

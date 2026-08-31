@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calendario BIPA Religioso</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<main class="app">
+<section class="hero">
+  <div class="brand">
+    <img class="logo" src="assets/logo-bipa.png" alt="Logo BIPA" width="220" height="145" decoding="async">
+    <div class="brand-copy">
+      <div class="hero-kicker">Calendario documental devocional</div>
+      <h1>Calendario BIPA Religioso</h1>
+      <p>
+        Calendario documental de celebraciones católicas, santos,
+        advocaciones marianas, fiestas diocesanas y tradiciones religiosas
+        de Venezuela.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="upcoming" id="upcoming" aria-live="polite"></section>
+<section class="controls">
+<div class="month-panel">
+    <div class="month-head">
+      <div>
+        <strong>Selector de mes</strong>
+        <span id="monthName">Enero</span>
+      </div>
+      <div class="navs">
+        <button class="nav" id="prev" aria-label="Mes anterior">←</button>
+        <button class="nav" id="next" aria-label="Mes siguiente">→</button>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="track"></div>
+      <input id="range" type="range" min="0" max="11" value="0" aria-label="Arrastrar para cambiar de mes">
+      <div class="months" id="months"></div>
+    </div>
+  </div>
+</section>
+<section class="content" id="content" aria-live="polite"></section>
+<footer>
+  Las celebraciones están clasificadas como nacionales, diocesanas o regionales.
+  Las fechas móviles se indican expresamente y deben confirmarse en el calendario
+  pastoral correspondiente.
+</footer>
+</main>
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="dialog">
+    <div class="dialog-top">
+      <div>
+        <div class="kicker"><i></i> Detalle de celebración</div>
+        <h2 id="modalTitle"></h2>
+      </div>
+      <button class="close" id="close" aria-label="Cerrar">×</button>
+    </div>
+    <div class="dialog-grid">
+      <div class="dialog-art">
+        <img id="modalImage" alt="">
+      </div>
+      <div class="details">
+        <div class="detail"><label>Descripción</label><p id="modalDescription"></p></div>
+        <div class="detail"><label>Importancia</label><p id="modalImportance"></p></div>
+        <div class="detail"><label>Curiosidades</label><p id="modalCuriosities"></p></div>
+        <div class="detail"><label>Fecha</label><p id="modalDate"></p></div>
+        <div class="detail"><label>Región</label><p id="modalRegion"></p></div>
+        <div class="detail"><label>Fuente</label><p id="modalSource"></p></div>
+        <div class="detail recommendation-detail">
+          <label id="modalCandleLabel">Artículo BIPA recomendado para la celebración</label>
+          <p id="modalCandleProduct"></p>
+          <p id="modalCandleText"></p>
+          <a id="modalCandleSource" class="source-link" target="_blank" rel="noopener noreferrer">Fuente de referencia</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mini-modal" id="recommendationModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="mini-dialog">
+    <button class="mini-close" id="miniClose" aria-label="Cerrar recomendación">×</button>
+    <div class="mini-kicker" id="miniLabel">Artículo BIPA recomendado</div>
+    <h2 id="miniTitle"></h2>
+    <p class="mini-product" id="miniProduct"></p>
+    <p class="mini-text" id="miniText"></p>
+    <a id="miniSource" class="source-link" target="_blank" rel="noopener noreferrer">Fuente de referencia</a>
+  </div>
+</div>
+<script src='js/app.js' defer></script>
+</body>
+</html>
+
+

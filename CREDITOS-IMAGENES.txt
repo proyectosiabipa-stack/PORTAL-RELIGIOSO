@@ -1,0 +1,5 @@
+CREDITOS DE IMAGENES
+===================
+Todas las imagenes de la carpeta imagenes se descargaron desde las miniaturas publicadas por Wikipedia/Wikimedia Commons. El archivo CREDITOS-IMAGENES.json conserva, para cada tarjeta, la pagina consultada y la URL de la imagen usada. Revise la pagina de origen para atribucion y licencia especifica de cada archivo antes de publicar el sitio en un dominio publico.
+
+No se utilizaron imagenes generadas por IA en este paquete.

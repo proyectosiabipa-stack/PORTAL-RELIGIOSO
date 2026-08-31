@@ -1,0 +1,17 @@
+FUENTES CONSULTADAS Y CRITERIO EDITORIAL
+
+Las fichas combinan el calendario liturgico general con referencias pastorales y culturales venezolanas. Las fechas moviles deben confirmarse cada ano en el calendario de la diocesis correspondiente.
+
+Fuentes doctrinales y liturgicas:
+- Santa Sede: https://www.vatican.va/content/liturgy/en.html
+- Catecismo de la Iglesia Catolica: https://www.vatican.va/archive/catechism_sp/p2s1c2a1_sp.html
+- Codigo de Derecho Canonico: https://www.vatican.va/archive/cod-iuris-canonici/esp/documents/cic_lib4-cann1244-1253_sp.html
+
+Fuentes culturales y venezolanas:
+- Fundación Empresas Polar: https://bibliofep.fundacionempresaspolar.org/dhv/
+- Conferencia Episcopal Venezolana: https://conferenciaepiscopalvenezolana.com/
+- Las referencias diocesanas indicadas en cada ficha deben contrastarse con la agenda pastoral local.
+
+Imagenes:
+- Los creditos de cada imagen original estan en CREDITOS-IMAGENES.json.
+- Las imagenes locales añadidas para completar la cobertura conservan el formato JPG y se muestran dentro del mismo marco 4:3.
