@@ -116,6 +116,7 @@ const events=[
   const typeLabel=item[5]==="principal"
     ?"celebración de alcance nacional dentro del calendario católico"
     :"tradición de especial arraigo en la comunidad indicada";
+  const category=categoryFor(item[0],item[1],item[4]);
 
   return {
     id:item[0],
@@ -126,6 +127,10 @@ const events=[
     type:item[5],
     description:item[6]+" Esta celebración conserva un lugar significativo en la vida pastoral: reúne oración, memoria, participación comunitaria y transmisión de la fe entre generaciones.",
     importance:"Su importancia radica en que es una "+typeLabel+". Ayuda a vincular la liturgia con la historia, la identidad cultural y la vida concreta de las comunidades, respetando las orientaciones de la Iglesia y del calendario propio.",
+    category:category,
+    categoryLabel:categoryLabel(category),
+    prayer:"Oración sugerida: presentar la intención familiar o comunitaria, agradecer la memoria de la celebración y pedir que la fe se exprese en servicio concreto durante el día.",
+    preparation:"Preparación BIPA: disponer un espacio limpio, una vela o velón según la celebración, intención escrita, y acompañar el gesto con una oración breve en familia o comunidad.",
     curiosities:[
       item[7],
       "La fecha se vive con celebraciones litúrgicas, oración comunitaria y expresiones de piedad popular según cada parroquia.",
@@ -138,6 +143,23 @@ const events=[
     candle:candleRecommendation({id:item[0],type:item[5]})
   };
 });
+
+function categoryFor(id,title,region){
+  const text=normalize([id,title,region].join(" "));
+  if(/maria|virgen|senora|pastora|candelaria|coromoto|chiquinquira|valle|asuncion|inmaculada|consolacion|socorro|paz|nieves|carmen|rosario|pilar/.test(text))return "mariana";
+  if(/san |santa |santos|apostol|arcangel|teresa|francisco|judas|miguel|benito|sebastian|blas|jose|marcos|isidro|fernando|marta|ana|santiago|pablo|pedro|inocentes/.test(text))return "santo";
+  if(/cruz|ramos|jueves|viernes|resurreccion|corpus|cristo|navidad|epifania|transfiguracion|familia|difuntos/.test(text))return "cristo";
+  return "tradicion";
+}
+
+function categoryLabel(category){
+  return {
+    mariana:"Mariana",
+    santo:"Santos",
+    cristo:"Cristo y liturgia",
+    tradicion:"Tradición venezolana"
+  }[category]||"Devocional";
+}
 
 function dateOnly(year,month,day){
   return new Date(year,month,day,12,0,0,0);
@@ -282,7 +304,15 @@ function renderUpcoming(){
     '</div>';
 }
 
-const state={month:0,query:"",focus:null};
+const state={
+  month:new Date().getMonth(),
+  query:"",
+  view:"cards",
+  category:"all",
+  type:"all",
+  region:"all",
+  focus:null
+};
 
 function escapeXml(value){
   return String(value)
@@ -306,55 +336,196 @@ function renderMonths(){
   }).join("");
 }
 
+function uniqueRegions(){
+  const regions=events.map(function(item){return item.region;}).sort(function(a,b){return a.localeCompare(b,"es");});
+  return ["all"].concat(regions.filter(function(region,index){return regions.indexOf(region)===index;}));
+}
+
+function renderRegionOptions(){
+  const regionFilter=document.getElementById("regionFilter");
+  if(!regionFilter)return;
+
+  regionFilter.innerHTML=uniqueRegions().map(function(region){
+    const label=region==="all"?"Todas las regiones":region;
+    return '<option value="'+escapeXml(region)+'">'+escapeXml(label)+'</option>';
+  }).join("");
+  regionFilter.value=state.region;
+}
+
+function renderQuickFilters(){
+  const filters=[
+    ["all","Todo"],
+    ["mariana","Marianas"],
+    ["santo","Santos"],
+    ["cristo","Liturgia"],
+    ["tradicion","Tradición"]
+  ];
+  const container=document.getElementById("quickFilters");
+  if(!container)return;
+
+  container.innerHTML=filters.map(function(filter){
+    return '<button class="quick-filter '+(state.category===filter[0]?"active":"")+'" type="button" data-category="'+filter[0]+'">'+filter[1]+'</button>';
+  }).join("");
+}
+
+function matchesFilters(item,includeMonth){
+  const query=normalize(state.query);
+  const text=normalize([
+    item.title,
+    item.region,
+    item.type,
+    item.description,
+    item.importance,
+    item.curiosities,
+    item.categoryLabel,
+    item.candle.product
+  ].join(" "));
+
+  return (!includeMonth || item.month===state.month) &&
+    (!query || text.includes(query)) &&
+    (state.category==="all" || item.category===state.category) &&
+    (state.type==="all" || item.type===state.type) &&
+    (state.region==="all" || item.region===state.region);
+}
+
+function filteredEvents(includeMonth){
+  return events.filter(function(item){return matchesFilters(item,includeMonth);});
+}
+
+function nextCelebrations(limit){
+  const today=startOfToday();
+  const candidates=[];
+  [today.getFullYear(),today.getFullYear()+1].forEach(function(year){
+    events.forEach(function(item){
+      const date=eventDate(item,year);
+      if(date && date>=today)candidates.push({item:item,date:date});
+    });
+  });
+  return candidates.sort(function(a,b){return a.date-b.date;}).slice(0,limit);
+}
+
+function renderInsights(){
+  const container=document.getElementById("insights");
+  if(!container)return;
+
+  const next=nextCelebrations(3);
+
+  container.innerHTML=
+    '<div class="insight wide">'+
+      '<span>Próxima agenda</span>'+
+      next.map(function(candidate){
+        return '<button type="button" data-id="'+candidate.item.id+'"><b>'+escapeXml(candidate.item.title)+'</b><small>'+escapeXml(formatEventDate(candidate.date))+'</small></button>';
+      }).join("")+
+    '</div>';
+}
+
+function renderCard(item){
+  return '<article class="card" tabindex="0" role="button" data-id="'+item.id+'">'+
+    '<div class="art">'+
+      '<img src="'+item.image+'" alt="Imagen referencial de '+escapeXml(item.title)+'" loading="eager" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.src=\'assets/logo-bipa.png\';this.classList.add(\'image-fallback\');">'+
+      '<div class="badges">'+
+        '<span class="badge '+(item.type==="principal"?"main":"regional")+'">'+(item.type==="principal"?"Principal":"Regional")+'</span>'+
+        '<span class="badge category">'+escapeXml(item.categoryLabel)+'</span>'+
+        '<span class="badge date">'+escapeXml(item.date)+'</span>'+
+      '</div>'+
+    '</div>'+
+    '<div class="body">'+
+      '<h3>'+escapeXml(item.title)+'</h3>'+
+      '<div class="meta">'+escapeXml(item.region)+' · '+escapeXml(item.candle.product)+'</div>'+
+      '<p>'+escapeXml(item.description)+'</p>'+
+      '<div class="card-footer">'+
+        '<span class="importance">'+(item.type==="principal"?"Celebración principal":"Tradición regional")+'</span>'+
+        '<button class="recommendation" data-recommendation="'+item.id+'" type="button">Artículo BIPA</button>'+
+        '<button class="share" data-share="'+item.id+'" type="button">WhatsApp</button>'+
+      '</div>'+
+    '</div>'+
+  '</article>';
+}
+
+function renderCards(list){
+  if(!list.length)return '<div class="empty">No se encontraron celebraciones en este mes con los filtros actuales.</div>';
+
+  return '<section class="month-section">'+
+    '<div class="month-title">'+
+      '<h2>'+escapeXml(months[state.month])+'</h2>'+
+      '<small>'+list.length+' celebración'+(list.length===1?"":"es")+'</small>'+
+    '</div>'+
+    '<div class="cards">'+list.map(renderCard).join("")+'</div>'+
+  '</section>';
+}
+
+function renderCalendar(list){
+  const year=startOfToday().getFullYear();
+  const first=dateOnly(year,state.month,1);
+  const daysInMonth=new Date(year,state.month+1,0).getDate();
+  const offset=(first.getDay()+6)%7;
+  const cells=[];
+
+  for(let index=0;index<offset;index++)cells.push('<div class="day muted"></div>');
+  for(let day=1;day<=daysInMonth;day++){
+    const dayEvents=list.filter(function(item){
+      const date=eventDate(item,year);
+      return date && date.getMonth()===state.month && date.getDate()===day;
+    });
+    cells.push('<button class="day '+(dayEvents.length?"has-event":"")+'" type="button" data-day="'+day+'">'+
+      '<span>'+day+'</span>'+
+      dayEvents.slice(0,3).map(function(item){return '<b>'+escapeXml(item.title)+'</b>';}).join("")+
+      (dayEvents.length>3?'<em>+'+(dayEvents.length-3)+'</em>':"")+
+    '</button>');
+  }
+
+  return '<section class="month-section calendar-view">'+
+    '<div class="month-title"><h2>Calendario de '+escapeXml(months[state.month])+'</h2><small>'+list.length+' evento'+(list.length===1?"":"s")+'</small></div>'+
+    '<div class="weekdays"><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span></div>'+
+    '<div class="calendar-grid">'+cells.join("")+'</div>'+
+  '</section>';
+}
+
+function renderTimeline(list){
+  const year=startOfToday().getFullYear();
+  const items=list.map(function(item){return {item:item,date:eventDate(item,year)};})
+    .filter(function(entry){return entry.date;})
+    .sort(function(a,b){return a.date-b.date;});
+
+  if(!items.length)return '<div class="empty">No hay fechas exactas para la agenda filtrada.</div>';
+
+  return '<section class="month-section timeline-view">'+
+    '<div class="month-title"><h2>Agenda pastoral del mes</h2><small>'+items.length+' fecha'+(items.length===1?"":"s")+'</small></div>'+
+    '<div class="timeline">'+items.map(function(entry){
+      return '<article class="timeline-item" data-id="'+entry.item.id+'" tabindex="0" role="button">'+
+        '<time>'+entry.date.getDate()+'<span>'+months[entry.date.getMonth()].slice(0,3)+'</span></time>'+
+        '<div><strong>'+escapeXml(entry.item.title)+'</strong><p>'+escapeXml(entry.item.region)+' · '+escapeXml(entry.item.categoryLabel)+'</p></div>'+
+        '<button type="button" data-id="'+entry.item.id+'">Ver</button>'+
+      '</article>';
+    }).join("")+'</div>'+
+  '</section>';
+}
+
 function render(){
   renderUpcoming();
+  renderQuickFilters();
+  renderInsights();
   document.getElementById("range").value=state.month;
   document.getElementById("monthName").textContent=months[state.month];
 
   document.querySelectorAll(".month").forEach(function(button){
     button.classList.toggle("active",Number(button.dataset.month)===state.month);
   });
-
-  const query=normalize(state.query);
-  const list=events.filter(function(item){
-    return item.month===state.month && (!query || normalize(Object.values(item).join(" ")).includes(query));
+  document.querySelectorAll(".view-tab").forEach(function(button){
+    const active=button.dataset.view===state.view;
+    button.classList.toggle("active",active);
+    button.setAttribute("aria-selected",active?"true":"false");
   });
 
-  if(!list.length){
-    document.getElementById("content").innerHTML='<div class="empty">No se encontraron celebraciones en este mes.</div>';
-    return;
-  }
-
-  document.getElementById("content").innerHTML=
-  '<section class="month-section">'+
-    '<div class="month-title">'+
-      '<h2>'+months[state.month]+'</h2>'+
-      '<small>'+list.length+' celebración'+(list.length===1?"":"es")+'</small>'+
-    '</div>'+
-    '<div class="cards">'+
-      list.map(function(item){
-        return '<article class="card" tabindex="0" role="button" data-id="'+item.id+'">'+
-          '<div class="art">'+
-            '<img src="'+item.image+'" alt="Imagen referencial de '+escapeXml(item.title)+'" loading="eager" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.src=\'assets/logo-bipa.png\';this.classList.add(\'image-fallback\');">'+
-            '<div class="badges">'+
-              '<span class="badge '+(item.type==="principal"?"main":"regional")+'">'+(item.type==="principal"?"Principal":"Regional")+'</span>'+
-              '<span class="badge date">'+item.date+'</span>'+
-            '</div>'+
-          '</div>'+
-          '<div class="body">'+
-            '<h3>'+item.title+'</h3>'+
-            '<div class="meta">'+item.region+'</div>'+
-            '<p>'+item.description+'</p>'+
-            '<div class="card-footer">'+
-              '<span class="importance">'+(item.type==="principal"?"Celebración principal":"Tradición regional")+'</span>'+
-              '<button class="recommendation" data-recommendation="'+item.id+'" type="button" onclick="openRecommendation(this.dataset.recommendation);event.stopImmediatePropagation();return false;">Artículo BIPA recomendado</button>'+
-              '<button class="share" data-share="'+item.id+'" type="button">Compartir por WhatsApp</button>'+
-            '</div>'+
-          '</div>'+
-        '</article>';
-      }).join("")+
-    '</div>'+
-  '</section>';
+  const monthList=filteredEvents(true);
+  const globalList=filteredEvents(false);
+  const list=state.view==="map"?globalList:monthList;
+  const views={
+    cards:renderCards,
+    calendar:renderCalendar,
+    timeline:renderTimeline
+  };
+  document.getElementById("content").innerHTML=(views[state.view]||renderCards)(list);
 }
 
 function openModal(id){
@@ -370,8 +541,11 @@ function openModal(id){
   document.getElementById("modalDescription").textContent=item.description;
   document.getElementById("modalImportance").textContent=item.importance;
   document.getElementById("modalCuriosities").textContent=item.curiosities;
+  document.getElementById("modalPrayer").textContent=item.prayer;
+  document.getElementById("modalPreparation").textContent=item.preparation;
   document.getElementById("modalDate").textContent=item.date;
   document.getElementById("modalRegion").textContent=item.region;
+  document.getElementById("modalCategory").textContent=item.categoryLabel;
   document.getElementById("modalSource").textContent=item.source;
   document.getElementById("modalCandleLabel").textContent=item.candle.label;
   document.getElementById("modalCandleProduct").textContent=item.candle.product;
@@ -379,6 +553,8 @@ function openModal(id){
   const sourceLink=document.getElementById("modalCandleSource");
   sourceLink.textContent=item.candle.sourceLabel;
   sourceLink.href=item.candle.sourceUrl;
+  document.getElementById("modalRecommendationButton").dataset.recommendation=item.id;
+  document.getElementById("modalShareButton").dataset.share=item.id;
 
   document.getElementById("modal").classList.add("open");
   document.getElementById("modal").setAttribute("aria-hidden","false");
@@ -523,6 +699,49 @@ if(searchInput){
   });
 }
 
+document.getElementById("quickFilters").addEventListener("click",function(event){
+  const button=event.target.closest("[data-category]");
+  if(!button)return;
+
+  state.category=button.dataset.category;
+  document.getElementById("categoryFilter").value=state.category;
+  render();
+});
+
+document.querySelectorAll(".view-tab").forEach(function(button){
+  button.addEventListener("click",function(){
+    state.view=button.dataset.view;
+    render();
+  });
+});
+
+document.getElementById("categoryFilter").addEventListener("change",function(event){
+  state.category=event.target.value;
+  render();
+});
+
+document.getElementById("typeFilter").addEventListener("change",function(event){
+  state.type=event.target.value;
+  render();
+});
+
+document.getElementById("regionFilter").addEventListener("change",function(event){
+  state.region=event.target.value;
+  render();
+});
+
+document.getElementById("resetFilters").addEventListener("click",function(){
+  state.query="";
+  state.category="all";
+  state.type="all";
+  state.region="all";
+  document.getElementById("search").value="";
+  document.getElementById("categoryFilter").value="all";
+  document.getElementById("typeFilter").value="all";
+  document.getElementById("regionFilter").value="all";
+  render();
+});
+
 document.getElementById("range").addEventListener("input",function(event){
   state.month=Number(event.target.value);
   render();
@@ -551,9 +770,16 @@ document.getElementById("upcoming").addEventListener("click",function(event){
   if(button)openModal(button.dataset.upcomingId);
 });
 
+document.getElementById("insights").addEventListener("click",function(event){
+  const button=event.target.closest("[data-id]");
+  if(button)openModal(button.dataset.id);
+});
+
 document.getElementById("content").addEventListener("click",function(event){
   const recommendation=event.target.closest("[data-recommendation]");
   const share=event.target.closest("[data-share]");
+  const day=event.target.closest("[data-day]");
+  const region=event.target.closest("[data-region]");
 
   if(recommendation){
     event.preventDefault();
@@ -566,6 +792,24 @@ document.getElementById("content").addEventListener("click",function(event){
     event.preventDefault();
     event.stopImmediatePropagation();
     shareCard(share.dataset.share);
+    return;
+  }
+
+  if(region){
+    state.region=region.dataset.region;
+    document.getElementById("regionFilter").value=state.region;
+    state.view="cards";
+    render();
+    return;
+  }
+
+  if(day){
+    const year=startOfToday().getFullYear();
+    const matches=filteredEvents(true).filter(function(item){
+      const date=eventDate(item,year);
+      return date && date.getMonth()===state.month && date.getDate()===Number(day.dataset.day);
+    });
+    if(matches.length)openModal(matches[0].id);
     return;
   }
 
@@ -584,9 +828,21 @@ document.getElementById("content").addEventListener("keydown",function(event){
 
 document.getElementById("close").addEventListener("click",closeModal);
 document.getElementById("miniClose").addEventListener("click",closeRecommendation);
+document.getElementById("modalRecommendationButton").addEventListener("click",function(event){
+  event.preventDefault();
+  closeModal();
+  openRecommendation(event.currentTarget.dataset.recommendation);
+});
+document.getElementById("modalShareButton").addEventListener("click",function(event){
+  event.preventDefault();
+  shareCard(event.currentTarget.dataset.share);
+});
 
 document.getElementById("modal").addEventListener("click",function(event){
   if(event.target===document.getElementById("modal"))closeModal();
+});
+
+document.getElementById("recommendationModal").addEventListener("click",function(event){
   if(event.target===document.getElementById("recommendationModal"))closeRecommendation();
 });
 
@@ -603,6 +859,7 @@ document.addEventListener("keydown",function(event){
   }
 });
 
+renderRegionOptions();
 renderMonths();
 render();
 window.setInterval(renderUpcoming,60000);
